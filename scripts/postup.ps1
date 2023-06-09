@@ -10,4 +10,5 @@ foreach ($line in $output) {
   [Environment]::SetEnvironmentVariable($name, $value)
 }
 
-Write-Host -ForegroundColor Green "Url: $env:KAFKA_UI_URL"
+Write-Host "Exec: az containerapp exec -n $env:KAFKA_CLI_APP_NAME -g $env:RESOURCE_GROUP --command /bin/bash"
+Write-Host "Url: $env:KAFKA_UI_URL"

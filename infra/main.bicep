@@ -96,3 +96,5 @@ module kafkaUi './core/host/container-app.bicep' = {
 }
 
 output KAFKA_UI_URL string = kafkaUi.outputs.url
+output KAFKA_CLI_APP_NAME string = kafkaCli.outputs.name
+output RESOURCE_GROUP string = rg.name
