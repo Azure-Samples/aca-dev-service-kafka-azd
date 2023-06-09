@@ -94,3 +94,5 @@ module kafkaUi './core/host/container-app.bicep' = {
     externalIngress: true
   }
 }
+
+output KAFKA_UI_URL string = kafkaUi.outputs.url

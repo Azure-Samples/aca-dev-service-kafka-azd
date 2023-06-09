@@ -1,3 +1,14 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
 name: kafka
+
+hooks:
+  postup:
+    windows:
+      shell: pwsh
+      run: ./scripts/postup.ps1
+      interactive: true
+    posix:
+      shell: sh
+      run: ./scripts/postup.sh
+      interactive: true

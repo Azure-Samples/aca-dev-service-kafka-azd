@@ -46,3 +46,5 @@ resource app 'Microsoft.App/containerApps@2023-04-01-preview' = {
     }
   }
 }
+
+output url string = targetPort > 0 ? 'https://${app.properties.configuration.ingress.fqdn}' : ''
